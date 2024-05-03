@@ -534,61 +534,92 @@ stroke:#ebebeb
 	color: rgba(16,16,16,.85)
 }
 .about > a {
-	background: #939393
+	background: #939393;
+	background-color: #fff;
 }
+
+/**
+	Color Palette
+	via: https://chat.openai.com/share/97346b66-a663-49b1-9ce5-73e63e78b308
+	---------------
+	Purple: #995c96
+	Yellow: #f9d71c
+	Teal: #2acfcf
+	Green: #68b723
+	Red: #f03535
+	Blue: #3d7bf0
+	White: #ffffff
+	Light Gray (RGB 235): #ebebeb
+	Black (RGB 16): #101010
+	Pink: #ff6ec7
+	Orange: #ff8c00
+**/
+
 .about.category
 , .about .category
 {
 	color: #939393;
 }
 .musings > a {
-	background: #d0a06e	
+	background: #d0a06e;
+	background-color: #f9d71c;
 }
 .musings.category
 , .musings .category
 {
 	color: #d0a06e;
+	color: #f9d71c;
 }
 .inspirations > a
 {
-	background: #6c8f8e
+	background: #6c8f8e;
+	background-color: #2acfcf;
 }
 .inspirations.category
 , .inspirations .category
 {
 	color: #6c8f8e;
+	color: #2acfcf;
 }
 .reviews > a {
-	background: #819e6d
+	background: #819e6d;
+	background-color: #68b723;
 }
 .reviews.category
 , .reviews .category
 {
 	color: #819e6d;
+	color: #68b723;
 }
 .productions > a {
-	background: #ca7f7e
+	background: #ca7f7e;
+	background-color: #ff6ec7;
 }
 .productions.category
 , .productions .category
 {
 	color: #ca7f7e;
+	color: #ff6ec7;
 }
 .shop > a {
-	background: #9c5c59
+	background: #9c5c59;
+	background-color: #f03535;
 }
 .shop.category
 , .shop .category
 {
 	color: #9c5c59;
+	color: #f03535;
 }
 .subscribe > a {
-	background: #49757e
+	background: #49757e;
+	background-color: #3d7bf0;
 }
 .subscribe.category
 , .subscribe .category
 {
 	color:#49757e;
+	color: #3d7bf0;
 }
 [role="main"] a {
 	color: hsl(303,25%,48%);
