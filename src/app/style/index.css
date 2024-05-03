@@ -191,7 +191,7 @@ background:, hsla(0,0%,6%,.125) 100%*/#101010
 	width: 100%
 }
 #nav>ul>li {
-	background: linear-gradient(top, hsla(0,0%,6%,.125) 0, hsla(0,0%,6%,.25) 100%)
+	background: linear-gradient(to bottom, hsla(0,0%,6%,.125) 0, hsla(0,0%,6%,.25) 100%)
 }
 #menu>a {
 	width: 100%;
@@ -517,11 +517,11 @@ dt.tags ~ dt ~ dd {
 }
 .red a:hover, .red a:focus, a.red:hover, a.red:focus {
 	background-color: #f6464b;
-	background: linear-gradient(top, hsla(0,0%,6%,.3) 0, hsla(0,0%,6%,0) 100%), #f6464b url(/img/red-grain.png)
+	background: linear-gradient(to bottom, hsla(0,0%,6%,.3) 0, hsla(0,0%,6%,0) 100%), #f6464b url(/img/red-grain.png)
 }
 .red-purple a:hover, .red-purple a:focus, a.red-purple:hover, a.red-purple:focus {
 	background-color: #ca506e;
-	background: linear-gradient(top, hsla(0,0%,6%,.3) 0, hsla(0,0%,6%,0) 100%), #ca506e url(/img/red-purple-grain.png)
+	background: linear-gradient(to bottom, hsla(0,0%,6%,.3) 0, hsla(0,0%,6%,0) 100%), #ca506e url(/img/red-purple-grain.png)
 }
 #branding>a svg|path, #branding>a path, #branding>a svg|use, #branding>a use {
 stroke:#ebebeb
@@ -668,7 +668,7 @@ text-align:center;
 fill:white;
 color:#ebebeb
 }
-[role="banner"] a:hover, [role="banner"] a:focus {;
+[role="banner"] a:hover, [role="banner"] a:focus {
 	color: #101010
 }
 [role="contentinfo"]>.content>* {
@@ -692,6 +692,7 @@ code.casual {
 	-webkit-hyphenate-limit-after: auto;
 	-webkit-hyphenate-limit-before: auto;
 	-moz-hyphens: auto;
+	hyphenate-character: "\2010";
 	hyphens: auto;
 	text-align: justify
 }

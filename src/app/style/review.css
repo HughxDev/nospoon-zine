@@ -314,7 +314,7 @@ figcaption
 #mentioned a > span
 {
 	background: #ffc83b; /* Old browsers */
-	background: linear-gradient(top,  hsla(43,100%,62%,1) 0%,hsla(40,79%,52%,1) 100%); /* W3C */
+	background: linear-gradient(to bottom,  hsla(43,100%,62%,1) 0%,hsla(40,79%,52%,1) 100%); /* W3C */
 	border:.2rem solid #15316b;
 	font-family:'Accord Alt';
 	width:16rem;

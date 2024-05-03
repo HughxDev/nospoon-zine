@@ -1,3 +1,10 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "hughx-ts/react"
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "quote-props": "off"
+  }
 }
