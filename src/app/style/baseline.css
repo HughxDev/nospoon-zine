@@ -120,11 +120,61 @@ hr
 }
 
 /* 1.ROOT */
+
+/**
+	Color Palette
+	via ChatGPT: https://chat.openai.com/share/97346b66-a663-49b1-9ce5-73e63e78b308
+	---------------
+	Black (RGB 16): #101010
+	Blue: #3d7bf0
+	Green: #68b723
+	Orange: #ff8c00
+	Pink: #ff6ec7
+	Purple: #995c96
+	Red: #f03535
+	Teal: #2acfcf
+	White (RGB 235): #ebebeb
+	Yellow: #f9d71c
+**/
 html
 {
+	--black--semi-transparent: rgba(16, 16, 16, .85);
+	--black: #101010;
+	--blue: #3d7bf0;
+	--gray: #939393;
+	--green: #68b723;
+	--orange: #ff8c00;
+	--pink: #ff6ec7;
+	--purple: #995c96;
+	--red: #f03535;
+	--red-brown: var(--red);
+	--teal: #2acfcf;
+	--white--semi-transparent: rgba(235, 235, 235, .85);
+	--white: #ebebeb;
+	--yellow: #f9d71c;
 	/*overflow-y: scroll;*/
 	/* url(../img/tmp/grid.png) repeat-y 50% 0 */
 	background: rgb(255,255,255);
+}
+
+html.\32 012 {
+	--black: #101010;
+	--black--semi-transparent: rgba(16, 16, 16, .85);
+	--black--rgb40: #282828;
+	--blue: #49757e;
+	--blue--dark: #405c80;
+	--gray: #939393;
+	--green: #819e6d;
+	--orange: transparent;
+	--pink: #ca7f7e;
+	--purple: #995c96;
+	--red-brown: #9c5c59;
+	--red-purple: #ca506e;
+	--red: #f6464b;
+	--teal: #6c8f8e;
+	--white: #ebebeb;
+	--white--semi-transparent: rgba(235, 235, 235, .85);
+	--yellow: #d0a06e;
 }
 
 body
