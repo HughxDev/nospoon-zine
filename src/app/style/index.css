@@ -4,6 +4,122 @@
 @namespace "http://www.w3.org/1999/xhtml";
 @namespace svg "http://www.w3.org/2000/svg";
 
+picture {
+  line-height: 0;
+}
+
+img, picture, video, audio, iframe {
+  max-width: 100%;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.2rem;
+  width: 82.32421875%;
+}
+
+.brand-name {
+  white-space: nowrap;
+}
+
+.branding {
+  font-family: 'Accord Alternate', 'AccordAlternate', 'Ubuntu', 'Noto Sans', 'Source Sans Pro', 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
+  text-transform: none;
+  text-align: center;
+  white-space: nowrap;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  font-size: 2.8rem;
+  width: 256px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-size: 3rem;
+  margin: 0 auto;
+  line-height: 1.375;
+  font-weight: bold;
+}
+
+.branding.branding--horizontal {
+	width: 100%;
+	display: flex;
+	text-align: left;
+	padding: 0 2.75rem;
+	padding: 0 1.5rem;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.branding.branding--horizontal picture {
+	width: 12rem;
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -.5rem;
+}
+
+.brand,
+.sub-brand {
+  transition: margin ease 0.25s, height ease 0.25s;
+  width: 256px;
+  height: 61px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-brand {
+  font-weight: normal;
+}
+
+.branding.branding--horizontal .brand,
+.branding.branding--horizontal .sub-brand {
+	width: auto;
+	height: auto;
+	display: inline;
+}
+
+.branding.branding--horizontal .sub-brand::before {
+	content: ' ';
+}
+
+@media only screen and (min-width: 21em) {
+  .branding {
+    font-size: 3.3rem;
+  }
+}
+
+@media only screen and (min-width: 26em) {
+  .branding {
+    font-size: 3.6rem;
+  }
+}
+
+.brand, .sub-brand {
+	transition: margin ease 0.25s, height ease 0.25s;
+	width: 256px;
+	height: 61px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+img, picture, video, audio, iframe {
+	max-width: 100%;
+}
+
+.sub-brand {
+	font-weight: normal;
+	margin-top: 1.1rem;
+}
+
+
+/* ------ */
+
 
 .article-type.article-type--pill {
 	/* vertical-align: middle; */
@@ -267,6 +383,10 @@ header>a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	display: block;
 	padding: .75em 0
 }
+#branding > a {
+	padding: 1.5em 0;
+}
+
 @media only screen and (min-width:70em) {
 #branding>a {
 	padding: .75em 0 1em 0

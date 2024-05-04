@@ -119,7 +119,7 @@ export default async function Review( { params }: NextPageProps ) {
 
             <a href="/" title="Home">
 
-              <div id="logo">
+              { /* <div id="logo">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -150,10 +150,28 @@ export default async function Review( { params }: NextPageProps ) {
                     xlinkHref="#a"
                   />
                 </svg>
-              </div>
+              </div> */ }
 
-              <h1 className="wordmark">No Spoon</h1>
-              <p id="tagline"><q>Free your mind.</q></p>
+              { /* <h1 className="wordmark">No Spoon Productions</h1> */ }
+              <h1 className="branding branding--horizontal">
+                <span>
+                  <picture>
+                    <source type="image/svg+xml" srcSet="https://nospoon.productions/img/no-spoon-logo-33fea616e1.svg" />
+                    <source type="image/webp" srcSet="https://nospoon.productions/img/no-spoon-logo-acd28fb0fd.webp, https://nospoon.productions/img/no-spoon-logo@2x-e4f8a5b8f9.webp 2x, https://nospoon.productions/img/no-spoon-logo@3x-21e2ecb6dc.webp 3x" />
+                    <img id="logo" className="logo" src="https://nospoon.productions/img/no-spoon-logo-98fb43eef5.png" srcSet="https://nospoon.productions/img/no-spoon-logo-98fb43eef5.png, https://nospoon.productions/img/no-spoon-logo@2x-a619197375.png 2x, https://nospoon.productions/img/no-spoon-logo@3x-e1852289c9.png 3x" width="211" alt="logo" />
+                  </picture>
+                  <span id="brand" className="brand">No Spoon</span>
+                  <span id="sub-brand" className="sub-brand">Zine</span>
+                </span>
+                <span style={ {
+                  transform: "scale(1.5)",
+                  fontWeight: "normal",
+                } }>≡</span>
+              </h1>
+              <p id="tagline">
+                { /* <q>Free your mind.</q> */ }
+                <q>Make art, not content.</q>
+              </p>
 
             </a>
 
@@ -456,11 +474,11 @@ export default async function Review( { params }: NextPageProps ) {
         <div className="content">
 
           { /*nospoon:build-nav()*/ }
-          <nav id="nav" role="navigation">
+          <nav id="nav" className="league-gothic" role="navigation">
             <hgroup className="implied">
               <h2>Sitewide Navigation</h2>
             </hgroup>
-		        <ul>
+		        <ul style={ { bottom: "-5.7rem" } }>
               <li className="about">
                 <a href="/about">About</a>
               </li>
