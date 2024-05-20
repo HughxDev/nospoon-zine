@@ -63,12 +63,14 @@ export default async function Review( { params }: NextPageProps ) {
     <dd>Oscar Isaac</dd>
   </>;
   const $topicDirector = 'Nicolas Winding Refn';
+  const $topicDirectorOfPhotography = 'Newton Thomas Sigel';
   const $topicContentRating = 'R';
   const $topicContentRater = <a title="“Film Ratings - Motion Picture Association” on motionpictures.org" href="https://www.motionpictures.org/film-ratings/"><abbr>MPA</abbr></a>;
   const $topicContentRatingReason = 'strong brutal bloody violence, language and some nudity';
   const $infoLinks = <ul>
     <li className="imdb"><a href="http://www.imdb.com/title/tt0780504/">IMDb</a></li>
     <li className="tmdb"><a href="http://www.themoviedb.org/movie/64690-drive">TMDB</a></li>
+    <li className="letterboxd"><a href="https://letterboxd.com/film/drive-2011/">Letterboxd</a></li>
     <li className="wikipedia"><a href="http://en.wikipedia.org/wiki/Drive_(2011_film)">Wikipedia</a></li>
     <li className="amazon"><a href="http://www.amazon.com/Drive-UltraViolet-Digital-Copy-Blu-ray/dp/B0064NTZJO%3FSubscriptionId%3DAKIAIH55RAJODGWTXQLQ%26tag%3Dnospotv-20%26linkCode%3Dsp1%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB0064NTZJO">Buy on Amazon</a></li>
   </ul>;
@@ -153,19 +155,34 @@ export default async function Review( { params }: NextPageProps ) {
               </div> */ }
 
               { /* <h1 className="wordmark">No Spoon Productions</h1> */ }
-              <h1 className="branding branding--horizontal">
+              { /* branding--horizontal */ }
+              <h1 className="branding">
                 <span>
-                  <picture>
+                  <picture style={ { display: 'none' } }>
                     <source type="image/svg+xml" srcSet="https://nospoon.productions/img/no-spoon-logo-33fea616e1.svg" />
                     <source type="image/webp" srcSet="https://nospoon.productions/img/no-spoon-logo-acd28fb0fd.webp, https://nospoon.productions/img/no-spoon-logo@2x-e4f8a5b8f9.webp 2x, https://nospoon.productions/img/no-spoon-logo@3x-21e2ecb6dc.webp 3x" />
                     <img id="logo" className="logo" src="https://nospoon.productions/img/no-spoon-logo-98fb43eef5.png" srcSet="https://nospoon.productions/img/no-spoon-logo-98fb43eef5.png, https://nospoon.productions/img/no-spoon-logo@2x-a619197375.png 2x, https://nospoon.productions/img/no-spoon-logo@3x-e1852289c9.png 3x" width="211" alt="logo" />
                   </picture>
-                  <span id="brand" className="brand">No Spoon</span>
-                  <span id="sub-brand" className="sub-brand">Zine</span>
+                  <span id="brand" className="brand">
+                    { /* No Spoon */ }
+                    { /* Habitué */ }
+                    <img src="/img/montage-4.png" />
+                  </span>
+                  { /* <span id="sub-brand" className="sub-brand">Magazine</span> */ }
                 </span>
+                <div style={ {
+                  fontWeight: 'normal',
+                  fontSize: '2rem',
+                  textAlign: 'left',
+                  fontFamily: 'Courier Prime',
+                } }>
+                  { /* (1) a person who frequents a particular place, such as the cinema<br /> */ }
+                  A film periodical from No Spoon Productions
+                </div>
                 <span style={ {
                   transform: "scale(1.5)",
                   fontWeight: "normal",
+                  display: 'none',
                 } }>≡</span>
               </h1>
               <p id="tagline">
@@ -189,7 +206,7 @@ export default async function Review( { params }: NextPageProps ) {
         <aside role="complementary">
         </aside>{ /* complementary */ }
 
-        <article id="main" className="review" role="main">
+        <article id="main" className="review" role="main" style={ { paddingTop: '9rem' } }>
           { /*<!--div className="content"-->*/ }
           <header>
             <hgroup>
@@ -227,38 +244,57 @@ export default async function Review( { params }: NextPageProps ) {
 
             <div className="content">
 
+            <section id="author">
+              <hgroup>
+                <h2>The Reviewer</h2>
+              </hgroup>
+
+              <div id="author-id">
+
+                <address>
+
+                  <dl>
+                    <dt>
+                      <a title="More from this author" href={ `/authors/${$entryAuthorId}/` }>
+                        { /*nospoon:get-author-avatar($entryAuthorId, 100)*/ }
+                        <img className="photo avatar" src={ $entryAuthorAvatar } width={ gravatarSize } height={ gravatarSize } alt={ `Photo of ${$entryAuthor}` } />
+                        { $entryAuthor }
+                      </a>
+                    </dt>
+                    <dd>
+
+                      <dl>
+                        <dt className="implied">Role</dt>
+                        <dd>{ $entryAuthorRole }</dd>
+
+                        <dt className="implied">E-mail</dt>
+                        <dd><a href={ `mailto:${$entryAuthorEmail}` }><code className="casual">{ $entryAuthorEmail }</code></a></dd>
+                      </dl>
+
+                    </dd>
+                  </dl>
+
+                </address>
+
+              </div>{ /* #author-id */ }
+
+              <p>{ $entryAuthorAbout }</p>
+
+            </section>{ /* #author */ }
+
               <section id="overview" data-id="about" className="major">
 
                 <div className="content">
 
-                  <hgroup className="decorative">
-                    <h2>The Lowdown</h2>
-                  </hgroup>
-
-                  { /*<img src="http://cf2.imgobject.com/t/p/original/ljJrY4ehK5xn3kJ8He5JixCDRVy.jpg" />*/ }
+                  
 
                   <section id="the-film" className="group">
 
-                    <hgroup>
-                      <h2>The Film</h2>
-                    </hgroup>
+                  <hgroup className="decorative">
+                    <h2><span className="int-ext int-ext--int">INT.</span> The Film</h2>
+                  </hgroup>
 
-                    <dl className="at-a-glance content">
-
-                      <div>
-                        <dt className="runtime">Running Time</dt>
-                        <dd>{ $topicRuntime }</dd>
-                      </div>
-
-                      <div>
-                        <dt className="ar">Aspect Ratio</dt>
-                        <dd>2.35:1</dd>
-                      </div>
-
-                      <div>
-                        <dt>Language</dt>
-                        <dd>English</dd>
-                      </div>
+                    <dl className="at-a-glance">
 
                       <div>
                         <dt>Director</dt>
@@ -266,13 +302,45 @@ export default async function Review( { params }: NextPageProps ) {
                       </div>
 
                       <div>
+                        <dt>Director of Photography</dt>
+                        { $topicDirectorOfPhotography }
+                      </div>
+
+                      <div>
+                        <dt className="runtime">Running Time</dt>
+                        <dd>{ $topicRuntime }</dd>
+                      </div>
+
+                      <div>
+                        <dt className="release-date">Release Date</dt>
+                        <dd>{ $topicPublished }</dd>
+                      </div>
+
+                      <div>
+                        <dt>Language</dt>
+                        <dd>English (80%)</dd>
+                        <dd>Italian (20%)</dd>
+                      </div>
+
+                      <div>
+                        <dt className="ar">Aspect Ratio</dt>
+                        <dd>2.35:1 (IMAX)</dd>
+                        <dd>16:9 (Standard)</dd>
+                      </div>
+
+                      <div>
                         <dt className="starring one-to-many">Starring</dt>
                         { $topicStarring }
                       </div>
 
-                      <div>
+                      <div style={ { width: '25%' } }>
                         <dt className="content-rating">Content Rating</dt>
                         <dd>“{ $topicContentRating }” ({ $topicContentRater }) for { $topicContentRatingReason }</dd>
+                      </div>
+
+                      <div>
+                        <dt>Verdict</dt>
+                        <dd>A+ (Top X% of Montage ratings)</dd>
                       </div>
 
                       <div>
@@ -284,96 +352,9 @@ export default async function Review( { params }: NextPageProps ) {
 
                   </section>{ /* #the-film */ }
 
-                  <section id="author">
-                    <hgroup>
-                      <h2>The Reviewer</h2>
-                    </hgroup>
+                  { /*<img src="http://cf2.imgobject.com/t/p/original/ljJrY4ehK5xn3kJ8He5JixCDRVy.jpg" />*/ }
 
-                    <div id="author-id">
-
-                      <address>
-
-                        <dl>
-                          <dt>
-                            <a title="More from this author" href={ `/authors/${$entryAuthorId}/` }>
-                              { /*nospoon:get-author-avatar($entryAuthorId, 100)*/ }
-                              <img className="photo avatar" src={ $entryAuthorAvatar } width={ gravatarSize } height={ gravatarSize } alt={ `Photo of ${$entryAuthor}` } />
-                              { $entryAuthor }
-                            </a>
-                          </dt>
-                          <dd>
-
-                            <dl>
-                              <dt className="implied">Role</dt>
-                              <dd>{ $entryAuthorRole }</dd>
-
-                              <dt className="implied">E-mail</dt>
-                              <dd><a href={ `mailto:${$entryAuthorEmail}` }><code className="casual">{ $entryAuthorEmail }</code></a></dd>
-                            </dl>
-
-                          </dd>
-                        </dl>
-
-                      </address>
-
-                    </div>{ /* #author-id */ }
-
-                    <p>{ $entryAuthorAbout }</p>
-
-                  </section>{ /* #author */ }
-
-                  <section id="publication-details">
-
-                    <div className="content">
-
-                      <hgroup>
-                        <h2>The Article</h2>
-                      </hgroup>
-
-                      <p>
-                        <a rel="license" title="Full license terms on Creative Commons" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-                          <svg
-                            version="1.0"
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlnsXlink="http://www.w3.org/1999/xlink"
-                            x="0px"
-                            y="0px"
-                            width="64px"
-                            height="64px"
-                            viewBox="5.5 -3.5 64 64"
-                            enableBackground="new 5.5 -3.5 64 64"
-                            xmlSpace="preserve"
-                          >
-                            <g>
-                              <circle fill="transparent" cx="37.785" cy="28.501" r="28.836" />
-                              <path
-                                fill="rgb(40,40,40)"
-                                d="M37.441-3.5c8.951,0,16.572,3.125,22.857,9.372c3.008,3.009,5.295,6.448,6.857,10.314
-                              c1.561,3.867,2.344,7.971,2.344,12.314c0,4.381-0.773,8.486-2.314,12.313c-1.543,3.828-3.82,7.21-6.828,10.143
-                              c-3.123,3.085-6.666,5.448-10.629,7.086c-3.961,1.638-8.057,2.457-12.285,2.457s-8.276-0.808-12.143-2.429
-                              c-3.866-1.618-7.333-3.961-10.4-7.027c-3.067-3.066-5.4-6.524-7-10.372S5.5,32.767,5.5,28.5c0-4.229,0.809-8.295,2.428-12.2
-                              c1.619-3.905,3.972-7.4,7.057-10.486C21.08-0.394,28.565-3.5,37.441-3.5z M37.557,2.272c-7.314,0-13.467,2.553-18.458,7.657
-                              c-2.515,2.553-4.448,5.419-5.8,8.6c-1.354,3.181-2.029,6.505-2.029,9.972c0,3.429,0.675,6.734,2.029,9.913
-                              c1.353,3.183,3.285,6.021,5.8,8.516c2.514,2.496,5.351,4.399,8.515,5.715c3.161,1.314,6.476,1.971,9.943,1.971
-                              c3.428,0,6.75-0.665,9.973-1.999c3.219-1.335,6.121-3.257,8.713-5.771c4.99-4.876,7.484-10.99,7.484-18.344
-                              c0-3.543-0.648-6.895-1.943-10.057c-1.293-3.162-3.18-5.98-5.654-8.458C50.984,4.844,44.795,2.272,37.557,2.272z M37.156,23.187
-                              l-4.287,2.229c-0.458-0.951-1.019-1.619-1.685-2c-0.667-0.38-1.286-0.571-1.858-0.571c-2.856,0-4.286,1.885-4.286,5.657
-                              c0,1.714,0.362,3.084,1.085,4.113c0.724,1.029,1.791,1.544,3.201,1.544c1.867,0,3.181-0.915,3.944-2.743l3.942,2
-                              c-0.838,1.563-2,2.791-3.486,3.686c-1.484,0.896-3.123,1.343-4.914,1.343c-2.857,0-5.163-0.875-6.915-2.629
-                              c-1.752-1.752-2.628-4.19-2.628-7.313c0-3.048,0.886-5.466,2.657-7.257c1.771-1.79,4.009-2.686,6.715-2.686
-                              C32.604,18.558,35.441,20.101,37.156,23.187z M55.613,23.187l-4.229,2.229c-0.457-0.951-1.02-1.619-1.686-2
-                              c-0.668-0.38-1.307-0.571-1.914-0.571c-2.857,0-4.287,1.885-4.287,5.657c0,1.714,0.363,3.084,1.086,4.113
-                              c0.723,1.029,1.789,1.544,3.201,1.544c1.865,0,3.18-0.915,3.941-2.743l4,2c-0.875,1.563-2.057,2.791-3.541,3.686
-                              c-1.486,0.896-3.105,1.343-4.857,1.343c-2.896,0-5.209-0.875-6.941-2.629c-1.736-1.752-2.602-4.19-2.602-7.313
-                              c0-3.048,0.885-5.466,2.658-7.257c1.77-1.79,4.008-2.686,6.713-2.686C51.117,18.558,53.938,20.101,55.613,23.187z"/>
-                            </g>
-                          </svg>
-                          <dfn>Creative Commons <abbr>BY-NC-ND 4.0</abbr></dfn>
-                        </a>: You may redestribute this work freely, provided it is: <a href="/terms/#attribution">properly attributed</a>, for noncommercial purposes, and without modification.</p>
-
-                    </div>{ /* .content */ }
-
-                  </section>{ /* #publicatios-details */ }
+                  
 
                 </div>{ /* .content */ }
 
@@ -384,7 +365,7 @@ export default async function Review( { params }: NextPageProps ) {
                 <div className="content">
 
                   <hgroup className="decorative">
-                    <h2>Shouted Out Flicks</h2>
+                    <h2><span className="int-ext int-ext--ext">EXT.</span> Referenced Films</h2>
                   </hgroup>
 
                   { /*<p>Organize by:
@@ -442,7 +423,7 @@ export default async function Review( { params }: NextPageProps ) {
                 <div className="content">
 
                   <hgroup className="decorative">
-                    <h2>Responses</h2>
+                    <h2><span className="int-ext int-ext--ext">EXT.</span> Responses</h2>
                   </hgroup>
 
                   <p><a>Write the editor</a> or <a>respond on your blog</a> by September 6th, 2012, and we may feature it here.</p>
@@ -465,6 +446,59 @@ export default async function Review( { params }: NextPageProps ) {
           </footer>
 
           { /*</div>*/ }{ /* .content */ }
+
+          <section id="publication-details">
+
+                    <div className="content">
+
+                      <hgroup>
+                        <h2>The Article</h2>
+                      </hgroup>
+
+                      <p>
+                        <a rel="license" title="Full license terms on Creative Commons" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                          <svg
+                            version="1.0"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlnsXlink="http://www.w3.org/1999/xlink"
+                            x="0px"
+                            y="0px"
+                            width="64px"
+                            height="64px"
+                            viewBox="5.5 -3.5 64 64"
+                            enableBackground="new 5.5 -3.5 64 64"
+                            xmlSpace="preserve"
+                          >
+                            <g>
+                              <circle fill="transparent" cx="37.785" cy="28.501" r="28.836" />
+                              <path
+                                fill="rgb(40,40,40)"
+                                d="M37.441-3.5c8.951,0,16.572,3.125,22.857,9.372c3.008,3.009,5.295,6.448,6.857,10.314
+                              c1.561,3.867,2.344,7.971,2.344,12.314c0,4.381-0.773,8.486-2.314,12.313c-1.543,3.828-3.82,7.21-6.828,10.143
+                              c-3.123,3.085-6.666,5.448-10.629,7.086c-3.961,1.638-8.057,2.457-12.285,2.457s-8.276-0.808-12.143-2.429
+                              c-3.866-1.618-7.333-3.961-10.4-7.027c-3.067-3.066-5.4-6.524-7-10.372S5.5,32.767,5.5,28.5c0-4.229,0.809-8.295,2.428-12.2
+                              c1.619-3.905,3.972-7.4,7.057-10.486C21.08-0.394,28.565-3.5,37.441-3.5z M37.557,2.272c-7.314,0-13.467,2.553-18.458,7.657
+                              c-2.515,2.553-4.448,5.419-5.8,8.6c-1.354,3.181-2.029,6.505-2.029,9.972c0,3.429,0.675,6.734,2.029,9.913
+                              c1.353,3.183,3.285,6.021,5.8,8.516c2.514,2.496,5.351,4.399,8.515,5.715c3.161,1.314,6.476,1.971,9.943,1.971
+                              c3.428,0,6.75-0.665,9.973-1.999c3.219-1.335,6.121-3.257,8.713-5.771c4.99-4.876,7.484-10.99,7.484-18.344
+                              c0-3.543-0.648-6.895-1.943-10.057c-1.293-3.162-3.18-5.98-5.654-8.458C50.984,4.844,44.795,2.272,37.557,2.272z M37.156,23.187
+                              l-4.287,2.229c-0.458-0.951-1.019-1.619-1.685-2c-0.667-0.38-1.286-0.571-1.858-0.571c-2.856,0-4.286,1.885-4.286,5.657
+                              c0,1.714,0.362,3.084,1.085,4.113c0.724,1.029,1.791,1.544,3.201,1.544c1.867,0,3.181-0.915,3.944-2.743l3.942,2
+                              c-0.838,1.563-2,2.791-3.486,3.686c-1.484,0.896-3.123,1.343-4.914,1.343c-2.857,0-5.163-0.875-6.915-2.629
+                              c-1.752-1.752-2.628-4.19-2.628-7.313c0-3.048,0.886-5.466,2.657-7.257c1.771-1.79,4.009-2.686,6.715-2.686
+                              C32.604,18.558,35.441,20.101,37.156,23.187z M55.613,23.187l-4.229,2.229c-0.457-0.951-1.02-1.619-1.686-2
+                              c-0.668-0.38-1.307-0.571-1.914-0.571c-2.857,0-4.287,1.885-4.287,5.657c0,1.714,0.363,3.084,1.086,4.113
+                              c0.723,1.029,1.789,1.544,3.201,1.544c1.865,0,3.18-0.915,3.941-2.743l4,2c-0.875,1.563-2.057,2.791-3.541,3.686
+                              c-1.486,0.896-3.105,1.343-4.857,1.343c-2.896,0-5.209-0.875-6.941-2.629c-1.736-1.752-2.602-4.19-2.602-7.313
+                              c0-3.048,0.885-5.466,2.658-7.257c1.77-1.79,4.008-2.686,6.713-2.686C51.117,18.558,53.938,20.101,55.613,23.187z"/>
+                            </g>
+                          </svg>
+                          <dfn>Creative Commons <abbr>BY-NC-ND 4.0</abbr></dfn>
+                        </a>: You may redestribute this work freely, provided it is: <a href="/terms/#attribution">properly attributed</a>, for noncommercial purposes, and without modification.</p>
+
+                    </div>{ /* .content */ }
+
+                  </section>{ /* #publicatios-details */ }
         </article>{ /* main */ }
 
       </div>{ /* #content.content */ }
@@ -474,12 +508,12 @@ export default async function Review( { params }: NextPageProps ) {
         <div className="content">
 
           { /*nospoon:build-nav()*/ }
-          <nav id="nav" className="league-gothic" role="navigation">
+          <nav id="nav" className="league-gothic courier-prime" role="navigation">
             <hgroup className="implied">
               <h2>Sitewide Navigation</h2>
             </hgroup>
-		        <ul style={ { bottom: "-5.7rem" } }>
-              <li className="about">
+		        <ul style={ { bottom: "-9rem" } }>
+              { /* <li className="about">
                 <a href="/about">About</a>
               </li>
               <li className="musings">
@@ -499,6 +533,24 @@ export default async function Review( { params }: NextPageProps ) {
               </li>
               <li className="subscribe">
                 <a href="/subscribe">Subscribe</a>
+              </li> */ }
+              <li>
+                <a href="/about">About</a>
+              </li>
+              <li>
+                <a href="/articles">Articles</a>
+              </li>
+              <li>
+                <a href="/curations">Curations</a>
+              </li>
+              <li>
+                <a href="/productions">Productions</a>
+              </li>
+              <li>
+                <a href="/shop">Shop</a>
+              </li>
+              <li>
+                <a href="/subscribe">Subscribe</a>
               </li>
               <li id="back"><a href="#top">Back to top</a></li>
             </ul>
@@ -507,7 +559,7 @@ export default async function Review( { params }: NextPageProps ) {
           <section id="cross-promotion">
 
             <hgroup>
-              <h2>Also on No Spoon</h2>
+              <h2>Also on Montage</h2>
             </hgroup>
 
             <ul className="total-6 macro">
