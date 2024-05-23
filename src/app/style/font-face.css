@@ -224,3 +224,38 @@
 		url('webfonts/ff-tisa-web-pro/bold-italic.woff') format('woff')
 	;
 }
+
+
+/*
+	Font: Automatic Typewriter
+	Designer: Ana’s Fonts
+	Licensed
+		by: MyFonts <https://www.myfonts.com/>
+		to: Hugh Guiney <http://nospoon.productions>
+		on: May 20th, 2024
+		for: 10,000 page views/month
+*/
+
+@font-face {
+	font-family: 'Automatic Typewriter';
+	font-weight: bold;
+	font-style: normal;
+	font-variant: normal;
+	src:
+		url('webfonts/automatic-typewriter/bold.otf') format('otf'),
+		url('webfonts/automatic-typewriter/bold.woff') format('woff'),
+		url('webfonts/automatic-typewriter/bold.woff2') format('woff2'),
+	;
+}
+
+@font-face {
+	font-family: 'Automatic Typewriter Underlined';
+	font-weight: bold;
+	font-style: normal;
+	font-variant: normal;
+	src:
+		url('webfonts/automatic-typewriter/underlined-bold.otf') format('otf'),
+		url('webfonts/automatic-typewriter/underlined-bold.woff') format('woff'),
+		url('webfonts/automatic-typewriter/underlined-bold.woff2') format('woff2'),
+	;
+}

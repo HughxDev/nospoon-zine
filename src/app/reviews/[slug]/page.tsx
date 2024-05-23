@@ -93,7 +93,7 @@ export default async function Review( { params }: NextPageProps ) {
 
   const videoMentions = [
     {
-      "expandedTitle": 'Le Samourai',
+      "expandedTitle": 'Le Samouraï',
       "lang": 'fr',
       "published": '1967-01-01',
     },
@@ -166,7 +166,8 @@ export default async function Review( { params }: NextPageProps ) {
                   <span id="brand" className="brand">
                     { /* No Spoon */ }
                     { /* Habitué */ }
-                    <img src="/img/montage-4.png" />
+                    { /* <img src="/img/montage-4.png" /> */ }
+                    Montage:
                   </span>
                   { /* <span id="sub-brand" className="sub-brand">Magazine</span> */ }
                 </span>
@@ -195,7 +196,55 @@ export default async function Review( { params }: NextPageProps ) {
           </div>{ /* #branding */ }
 
           <div id="menu">
-            <a href="#nav">Jump to navigation</a>
+            { /* <a href="#nav">Jump to navigation</a> */ }
+            { /*nospoon:build-nav()*/ }
+            <nav id="nav" className="courier-prime" role="navigation">
+              <hgroup className="implied">
+                <h2>Sitewide Navigation</h2>
+              </hgroup>
+              <ul>
+                { /* <li className="about">
+                  <a href="/about">About</a>
+                </li>
+                <li className="musings">
+                  <a href="/musings">Musings</a>
+                </li>
+                <li className="inspirations">
+                  <a href="/inspirations">Inspirations</a>
+                </li>
+                <li className="reviews here">
+                  <a href="/">Reviews</a>
+                </li>
+                <li className="productions">
+                  <a href="/productions">Productions</a>
+                </li>
+                <li className="shop">
+                  <a href="/shop">Shop</a>
+                </li>
+                <li className="subscribe">
+                  <a href="/subscribe">Subscribe</a>
+                </li> */ }
+                <li>
+                  <a href="/about">About</a>
+                </li>
+                <li>
+                  <a href="/articles">Articles</a>
+                </li>
+                <li>
+                  <a href="/curations">Curations</a>
+                </li>
+                <li>
+                  <a href="/productions">Productions</a>
+                </li>
+                <li>
+                  <a href="/shop">Shop</a>
+                </li>
+                <li>
+                  <a href="/subscribe">Subscribe</a>
+                </li>
+                <li id="back"><a href="#top">Back to top</a></li>
+              </ul>
+            </nav>
           </div>{ /* #menu */ }
 
         </div>{ /* .content */ }
@@ -206,7 +255,7 @@ export default async function Review( { params }: NextPageProps ) {
         <aside role="complementary">
         </aside>{ /* complementary */ }
 
-        <article id="main" className="review" role="main" style={ { paddingTop: '9rem' } }>
+        <article id="main" className="review" role="main">
           { /*<!--div className="content"-->*/ }
           <header>
             <hgroup>
@@ -226,7 +275,7 @@ export default async function Review( { params }: NextPageProps ) {
 
           <div id="article" className="entry-content">{ /*contentEditable="true"*/ }
             <p>The Driver drives for hire. He has no other name, and no other life. When we first see him, he’s the wheelman for a getaway car, who runs from police pursuit not only by using sheer speed and muscle, but by coolly exploiting the street terrain and outsmarting his pursuers. By day, he is a stunt driver for action movies. The two jobs represent no conflict for him: He drives.</p>
-            <p>As played by Ryan Gosling, he is in the tradition of two iconic heroes of the 1960s: Clint Eastwood’s Man With No Name and Alain Delon in <cite>Le Samourai</cite>. He has no family, no history and seemingly few emotions. Whatever happened to him drove any personality deep beneath the surface. He is an existential hero, I suppose, defined entirely by his behavior.</p>
+            <p>As played by Ryan Gosling, he is in the tradition of two iconic heroes of the 1960s: Clint Eastwood’s Man With No Name and Alain Delon in <cite>Le Samouraï</cite>. He has no family, no history and seemingly few emotions. Whatever happened to him drove any personality deep beneath the surface. He is an existential hero, I suppose, defined entirely by his behavior.</p>
             <p>That would qualify him as the hero of a mindless action picture, all CGI and crashes and mayhem. <cite>Drive</cite> is more of an elegant exercise in style, and its emotions may be hidden but they run deep. Sometimes a movie will make a greater impact by not trying too hard. The enigma of the driver is surrounded by a rich gallery of supporting actors who are clear about their hopes and fears, and who have either reached an accommodation with the Driver, or not. Here is still another illustration of the old Hollywood noir principle that a movie lives its life not through its hero, but within its shadows.</p>
             <p>The Driver lives somewhere (somehow that’s improbable, since we expect him to descend full-blown into the story). His neighbor is Irene, played by Carey Mulligan, that template of vulnerability. She has a young son, Benecio (Kaden Leos), who seems to stir the Driver’s affection, although he isn’t the effusive type. They grow warm, but in a week, her husband, Standard (Oscar Isaac), is released from prison. Against our expectations, Standard isn’t jealous or hostile about the new neighbor, but sizes him up, sees a professional and quickly pitches a $1 million heist idea. That will provide the engine for the rest of the story, and as Irene and Benecio are endangered, the Driver reveals deep feelings and loyalties indeed, and undergoes enormous risk at little necessary benefit to himself.</p>
             <p>The film by the Danish director Nicolas Winding Refn (<cite>Bronson</cite>), based on a novel by James Sallis, peoples its story with characters who bring lifetimes onto the screen, in contrast to the Driver, who brings as little as possible. Ron Perlman seems to be a big-time operator working out of a small-time front, a pizzeria in a  strip mall. Albert Brooks, not the slightest bit funny, plays a producer of the kinds of B movies the Driver does stunt driving for &#8212; and also has a sideline in crime. These people are ruthless. </p>
@@ -244,9 +293,9 @@ export default async function Review( { params }: NextPageProps ) {
 
             <div className="content">
 
-            <section id="author">
-              <hgroup>
-                <h2>The Reviewer</h2>
+            <section id="author" className="major">
+              <hgroup className="decorative">
+                <h4><span className="int-ext int-ext--int">CLOSE ON:</span> The Author</h4>
               </hgroup>
 
               <div id="author-id">
@@ -276,9 +325,11 @@ export default async function Review( { params }: NextPageProps ) {
 
                 </address>
 
+                <p>{ $entryAuthorAbout }</p>
+
               </div>{ /* #author-id */ }
 
-              <p>{ $entryAuthorAbout }</p>
+             
 
             </section>{ /* #author */ }
 
@@ -423,7 +474,7 @@ export default async function Review( { params }: NextPageProps ) {
                 <div className="content">
 
                   <hgroup className="decorative">
-                    <h2><span className="int-ext int-ext--ext">EXT.</span> Responses</h2>
+                    <h2><span className="int-ext int-ext--ext">CUT TO:</span> Responses</h2>
                   </hgroup>
 
                   <p><a>Write the editor</a> or <a>respond on your blog</a> by September 6th, 2012, and we may feature it here.</p>
@@ -506,55 +557,6 @@ export default async function Review( { params }: NextPageProps ) {
       <footer id="bottom" role="contentinfo">
 
         <div className="content">
-
-          { /*nospoon:build-nav()*/ }
-          <nav id="nav" className="league-gothic courier-prime" role="navigation">
-            <hgroup className="implied">
-              <h2>Sitewide Navigation</h2>
-            </hgroup>
-		        <ul style={ { bottom: "-9rem" } }>
-              { /* <li className="about">
-                <a href="/about">About</a>
-              </li>
-              <li className="musings">
-                <a href="/musings">Musings</a>
-              </li>
-              <li className="inspirations">
-                <a href="/inspirations">Inspirations</a>
-              </li>
-              <li className="reviews here">
-                <a href="/">Reviews</a>
-              </li>
-              <li className="productions">
-                <a href="/productions">Productions</a>
-              </li>
-              <li className="shop">
-                <a href="/shop">Shop</a>
-              </li>
-              <li className="subscribe">
-                <a href="/subscribe">Subscribe</a>
-              </li> */ }
-              <li>
-                <a href="/about">About</a>
-              </li>
-              <li>
-                <a href="/articles">Articles</a>
-              </li>
-              <li>
-                <a href="/curations">Curations</a>
-              </li>
-              <li>
-                <a href="/productions">Productions</a>
-              </li>
-              <li>
-                <a href="/shop">Shop</a>
-              </li>
-              <li>
-                <a href="/subscribe">Subscribe</a>
-              </li>
-              <li id="back"><a href="#top">Back to top</a></li>
-            </ul>
-          </nav>
 
           <section id="cross-promotion">
 

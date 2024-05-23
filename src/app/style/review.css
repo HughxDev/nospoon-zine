@@ -65,6 +65,7 @@
 	margin-left:auto;
 	margin-right:auto;
 	max-width:100%;
+	width: 100%;
 }
 
 #overview
@@ -95,19 +96,19 @@ dl.at-a-glance
 
 .int-ext {
 	font-size: 80%;
-	vertical-align: middle;
-	line-height: 1;
+	vertical-align: baseline;
+	line-height: .9;
 	display: inline-block;
-	height: 2.5rem;
+	/* height: 2.5rem; */
 }
 
-.int-ext.int-ext--int {
+/* .int-ext.int-ext--int {
 	transform: rotate(-2deg);
 }
 
 .int-ext.int-ext--ext {
 	transform: rotate(2deg);
-}
+} */
 
 dl.at-a-glance {
 	display: grid;
@@ -479,10 +480,27 @@ blockquote + p
 	}
 }
 
+#author-id {
+	display: flex;
+	justify-content: center;
+	width: 78rem;
+	margin: 0 auto;
+	height: 10.6rem;
+}
+
+#author-id > address {
+	border-right: 0.15rem dotted black;
+	padding-right: 2rem;
+	margin-right: 3rem;
+	margin-bottom: 0;
+}
+
 #author-id > address > dl
 {
 	font-size: 1.1em;
 	line-height:1.5;
+	min-height: 100px;
+	min-width: 35rem;
 }
 
 #author-id > address > dl dt
@@ -557,6 +575,8 @@ article[role="main"] > /* .content > */ header /*:first-of-type but shouldn't be
 	{
 		float: left;
 		margin-right: .75em;
+		/* display: inline-block; */
+    vertical-align: text-top;
 	}
 	
 	#author-id
@@ -819,10 +839,10 @@ dl.at-a-glance > div:last-child
      padding:0 1.05rem;
 }
 
-#author p
+/* #author p
 {
 	max-width: 29em;
-}
+} */
 }
 
 .entry-content > p:first-child
@@ -856,6 +876,9 @@ dl.at-a-glance > div:last-child
 #author
 {
      /*border-right:2px dashed rgba(16,16,16,.75);*/
+		 margin-left: auto;
+		 margin-right: auto;
+		 /* max-width: 47.2rem; */
 }
 
 /*#publication-details

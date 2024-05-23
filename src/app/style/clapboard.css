@@ -1,0 +1,72 @@
+#nav > ul > li:nth-child(1n) > a,
+.reviews > a {
+	background-color: var(--green);
+}
+.reviews.category
+, .reviews .category
+{
+	color: var(--green);
+}
+
+#nav > ul > li:nth-child(2n) > a,
+.musings > a {
+	background-color: var(--yellow);
+}
+.musings.category
+, .musings .category
+{
+	color: var(--yellow);
+}
+
+#nav > ul > li:nth-child(3n) > a,
+.subscribe > a {
+	background-color: var(--blue);
+}
+.subscribe.category
+, .subscribe .category
+{
+	color: var(--blue);
+}
+
+#nav > ul > li:nth-child(4n) > a,
+.shop > a {
+	background-color: var(--red-brown);
+	/* background-color: var(--red); */
+}
+.shop.category
+, .shop .category
+{
+	color: var(--red-brown);
+	/* color: var(--red); */
+}
+
+#nav > ul > li:nth-child(5n) > a,
+.about > a {
+	background-color: white;
+}
+.about.category
+, .about .category
+{
+	color: white;
+}
+
+#nav > ul > li:nth-child(6n) > a,
+.inspirations > a
+{
+	background-color: var(--gray);
+}
+.inspirations.category
+, .inspirations .category
+{
+	color: var(--gray);
+}
+
+#nav > ul > li:nth-child(7n) > a,
+.productions > a {
+	background-color: var(--pink);
+}
+.productions.category
+, .productions .category
+{
+	color: var(--pink);
+}
